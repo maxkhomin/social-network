@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+.idea/
+.venv/
+
 # C extensions
 *.so
 
@@ -50,6 +53,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+LICENCE
 
 # Translations
 *.mo
@@ -60,6 +64,7 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+.media/
 
 # Flask stuff:
 instance/

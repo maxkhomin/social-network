@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Войти{% endblock %}
+{% block content %}
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Войти на сайт</div>
+          <div class="card-body">
+            {% include 'includes/errors.html' %}
+            <form method="post"
+              {% if action_url %}
+                action="{% url action_url %}"
+              {% endif %}
+            >
+            {% csrf_token %}
+            {% include 'includes/forms.html' %}
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-success">Войти</button>
+              <a href="{% url 'users:password_reset' %}" class="btn btn-link text-muted">Забыли пароль?</a>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
